@@ -1,0 +1,89 @@
+﻿@page
+@model MongoDbWebApplication.Pages.MongoDbData.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>MongoDb</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MongoDb.FirstName" class="control-label"></label>
+                <input asp-for="MongoDb.FirstName" class="form-control" />
+                <span asp-validation-for="MongoDb.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MongoDb.LastName" class="control-label"></label>
+                <input asp-for="MongoDb.LastName" class="form-control" />
+                <span asp-validation-for="MongoDb.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MongoDb.PersonalPhone" class="control-label"></label>
+                <input asp-for="MongoDb.PersonalPhone" class="form-control" />
+                <span asp-validation-for="MongoDb.PersonalPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MongoDb.WorkPhone" class="control-label"></label>
+                <input asp-for="MongoDb.WorkPhone" class="form-control" />
+                <span asp-validation-for="MongoDb.WorkPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MongoDb.PersonalEmail" class="control-label"></label>
+                <input asp-for="MongoDb.PersonalEmail" class="form-control" />
+                <span asp-validation-for="MongoDb.PersonalEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MongoDb.WorkEmail" class="control-label"></label>
+                <input asp-for="MongoDb.WorkEmail" class="form-control" />
+                <span asp-validation-for="MongoDb.WorkEmail" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="MongoDb.IsFullTime" class="control-label"></label>
+                <input asp-for="MongoDb.IsFullTime" class="form-control" />
+                <span asp-validation-for="MongoDb.IsFullTime" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="MongoDb.HoursPerWeek" class="control-label"></label>
+                <input asp-for="MongoDb.HoursPerWeek" class="form-control" />
+                <span asp-validation-for="MongoDb.HoursPerWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MongoDb.Title" class="control-label"></label>
+                <input asp-for="MongoDb.Title" class="form-control" />
+                <span asp-validation-for="MongoDb.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MongoDb.Department" class="control-label"></label>
+                <input asp-for="MongoDb.Department" class="form-control" />
+                <span asp-validation-for="MongoDb.Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MongoDb.CreatedAt" class="control-label"></label>
+                <input asp-for="MongoDb.CreatedAt" class="form-control" />
+                <span asp-validation-for="MongoDb.CreatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MongoDb.UpdatedAt" class="control-label"></label>
+                <input asp-for="MongoDb.UpdatedAt" class="form-control" />
+                <span asp-validation-for="MongoDb.UpdatedAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
